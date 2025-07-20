@@ -6,6 +6,18 @@ InGeniVoice is a voice-first AI assistant built using Next.js, OpenRouter, and t
 
 ---
 
+## 🙋‍♂️ Developed by
+### Darshan Upadhye
+📌 GitHub | 🌐 Portfolio
+
+---
+
+## 🚀 Live Demo
+
+🌐 Click here to try it out [InGeniVoice](https://in-geni-voice.vercel.app/)
+
+---
+
 ## 🔍 Features
 
 - 🎙️ Voice-to-text input via Web Speech API
@@ -35,3 +47,13 @@ InGeniVoice is a voice-first AI assistant built using Next.js, OpenRouter, and t
 - "Translate 'Good Morning' to Japanese."
 
 ---
+
+## 🧠 AI Model Used
+
+- **Model**: `deepseek/deepseek-r1`
+- **Provider**: [OpenRouter.ai]
+
+---
+
+## 📸 Screenshots
+
