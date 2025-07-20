@@ -1,7 +1,7 @@
 // pages/index.tsx
 
 import Head from 'next/head';
-import InGeniVoiceWelcome from '/components/InGeniVoiceWelcome';
+import InGeniVoiceWelcome from '../components/InGeniVoiceWelcome';
 
 export default function Home() {
   return (
