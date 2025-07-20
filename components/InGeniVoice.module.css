@@ -1,0 +1,196 @@
+.voiceAssistantContainer {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #874ed9;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s;
+}
+
+.closeButton:hover {
+  transform: scale(1.2);
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 6rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 10rem);
+  padding-right: 0.5rem;
+  scroll-behavior: smooth;
+}
+
+.aiMessage,
+.userMessage {
+  display: flex;
+  align-items: flex-end;
+}
+
+.aiMessage {
+  justify-content: flex-start;
+}
+
+.userMessage {
+  justify-content: flex-end;
+}
+
+.avatarImg {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.voiceBubbleAI,
+.voiceBubbleUser {
+  border-radius: 1.2rem;
+  padding: 1rem;
+  max-width: 70%;
+  position: relative;
+}
+
+.voiceBubbleAI {
+  background: linear-gradient(135deg, #429dcc, #874ed9, #2a53c9);
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.voiceBubbleUser {
+  background: #e0e0e0;
+  color: #000;
+  margin-right: 0.5rem;
+  text-align: right;
+}
+
+/* Inner content */
+.messageContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.playButton {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.waveAnimation {
+  height: 20px;
+  width: 100%;
+  margin-top: 0.5rem;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.4) 0,
+    rgba(255, 255, 255, 0.4) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  background-size: 200% 100%;
+  animation: wave 1.2s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.micButtonContainer {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.micButton {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 72px;
+  height: 72px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.micIcon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.waveRing {
+  position: absolute;
+  border: 3px solid #429dcc;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: pulse 1.2s infinite;
+}
+
+.typingDots {
+  display: inline-block;
+  width: 2rem;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.typingDots span {
+  display: inline-block;
+  animation: blink 1.4s infinite both;
+}
+
+.typingDots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typingDots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
